@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="container">
-      <form className="search-form">
+      <form className="search-form search-form--centered">
         <input
           className="search-form__field"
           type="text"

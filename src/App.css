@@ -11,7 +11,16 @@
   display: flex;
   width: 100%;
   max-width: 615px;
+}
+
+.search-form--centered {
   margin: auto;
+}
+
+.search-form--on-top {
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .search-form__field {
