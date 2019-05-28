@@ -1,11 +1,17 @@
 import React from "react";
+import "./App.css";
 
 function App() {
   return (
     <div className="container">
-      <form>
-        <input type="text" name="search" id="search" />
-        <button className="btn btn-search">Search</button>
+      <form className="search-form">
+        <input
+          className="search-form__field"
+          type="text"
+          name="search"
+          id="search"
+        />
+        <button className="search-form__btn">Search</button>
       </form>
     </div>
   );
