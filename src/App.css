@@ -11,13 +11,10 @@
   display: flex;
   width: 100%;
   max-width: 615px;
-}
-
-.search-form--centered {
   margin: auto;
 }
 
-.search-form--on-top {
+.search-form--ontop {
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 45px;
@@ -94,6 +91,7 @@
   background-image: url("./img/icon-book.svg");
   background-repeat: no-repeat;
   background-position: 50%;
+  overflow: hidden;
 }
 
 .book__cover-img {
