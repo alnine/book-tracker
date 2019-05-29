@@ -17,21 +17,14 @@ function App() {
       <ul className="book-list">
         <li className="book-list__item">
           <a href="#" className="book">
-            <img
-              src="https://via.placeholder.com/205x265"
-              alt=""
-              className="book__cover"
-              width="205"
-              height="265"
-            />
-            <h4 className="book__author">Author</h4>
-            <h3 className="book__title">Book Title</h3>
-          </a>
-        </li>
-        <li className="book-list__item">
-          <a href="#" className="book">
-            <div className="book__stub">
-              <span className="book__stub-title">Book #2</span>
+            <div className="book__cover">
+              <img
+                src="https://via.placeholder.com/205x265"
+                alt="Book title"
+                className="book__cover-img"
+                width="205"
+                height="265"
+              />
             </div>
             <h4 className="book__author">Author</h4>
             <h3 className="book__title">Book Title</h3>
@@ -39,35 +32,8 @@ function App() {
         </li>
         <li className="book-list__item">
           <a href="#" className="book">
-            <div className="book__stub">
-              <span className="book__stub-title">Book #3</span>
-            </div>
-            <h4 className="book__author">Author</h4>
-            <h3 className="book__title">Book Title</h3>
-          </a>
-        </li>
-        <li className="book-list__item">
-          <a href="#" className="book">
-            <div className="book__stub">
-              <span className="book__stub-title">Book #4</span>
-            </div>
-            <h4 className="book__author">Author</h4>
-            <h3 className="book__title">Book Title</h3>
-          </a>
-        </li>
-        <li className="book-list__item">
-          <a href="#" className="book">
-            <div className="book__stub">
-              <span className="book__stub-title">Book #5</span>
-            </div>
-            <h4 className="book__author">Author</h4>
-            <h3 className="book__title">Book Title</h3>
-          </a>
-        </li>
-        <li className="book-list__item">
-          <a href="#" className="book">
-            <div className="book__stub">
-              <span className="book__stub-title">Book #6</span>
+            <div className="book__cover">
+              <span className="book__cover-title">Book #2</span>
             </div>
             <h4 className="book__author">Author</h4>
             <h3 className="book__title">Book Title</h3>
