@@ -8,6 +8,8 @@ import utils from "./services/utils";
 class App extends Component {
   state = {
     searchQuery: "",
+    isSubmitted: false,
+    resultHeader: "",
     books: []
   };
 
@@ -55,26 +57,33 @@ class App extends Component {
     return books;
   }
 
+  handleChange = query => {
+    this.setState({ searchQuery: query });
+  };
+
   handleSubmit = async e => {
     e.preventDefault();
-    const searchQuery = e.currentTarget.children.search.value;
 
-    const queryData = await this.getSearchQueryResult(searchQuery);
+    const queryData = await this.getSearchQueryResult(this.state.searchQuery);
     const booksIsbn = this.getIsbn(queryData);
     const books = await this.getBooks(booksIsbn);
 
-    this.setState({ books, searchQuery });
+    const resultHeader = utils.doCapitalize(this.state.searchQuery);
+    this.setState({ books, isSubmitted: true, resultHeader });
   };
 
   render() {
-    const { searchQuery, books } = this.state;
+    const { searchQuery, books, isSubmitted, resultHeader } = this.state;
     return (
       <div className="container">
-        <SearchForm query={searchQuery} onSubmit={this.handleSubmit} />
-        {searchQuery && (
-          <h2 className="request">{utils.doCapitalize(searchQuery)}</h2>
-        )}
-        {searchQuery && <Books books={books} />}
+        <SearchForm
+          status={isSubmitted}
+          query={searchQuery}
+          onSubmit={this.handleSubmit}
+          onChange={this.handleChange}
+        />
+        {isSubmitted && <h2 className="request">{resultHeader}</h2>}
+        {isSubmitted && <Books books={books} />}
       </div>
     );
   }

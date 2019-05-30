@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import Book from "./book";
 
 class Books extends Component {
-  state = {
-    books: []
-  };
-
   render() {
     const { books } = this.props;
 

@@ -48,6 +48,11 @@
   cursor: pointer;
 }
 
+.search-form__btn:disabled {
+  cursor: auto;
+  background-color: #cccccc;
+}
+
 .request {
   margin-bottom: 40px;
   font-size: 24px;
